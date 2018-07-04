@@ -233,7 +233,7 @@ new_stream(Connection, Service, Rpc, Encoder, Options) ->
     %% All the information is combined in 1 map, 
     %% which is is the state of the gen_server.
     RpcDef#{stream_id => StreamId,
-            package => [atom_to_list(Package),$.],
+            package => Package, %[atom_to_list(Package),$.],
             service => Service,
             rpc => Rpc,
             queue => queue:new(),
